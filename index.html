@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Major Computing Systems Ltd. — Intelligence, Engineered.</title>
+  <meta name="description" content="Major Computing Systems Ltd. builds AI agents, custom software, and cloud systems that automate the hard parts of your business. Based in Chilliwack, BC, serving clients remotely.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=14">
+</head>
+<body>
+
+  <canvas id="neural-canvas" class="neural-bg" aria-hidden="true"></canvas>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand">
+        <img src="assets/logo-mark.png" alt="Major Computing Systems logo" class="brand-mark">
+        <span class="brand-name">Major Computing<span class="brand-suffix">Systems Ltd.</span></span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <div class="hero-brand">
+            <img src="assets/logo-mark.png" alt="Major Computing Systems logo" class="hero-brand-mark">
+            <h1 class="hero-brand-name">Major Computing<span class="hero-brand-suffix">Systems Ltd.</span></h1>
+          </div>
+          <p class="hero-tagline"><span class="gradient-text">Intelligence, Engineered.</span></p>
+          <p class="hero-sub">
+            Major Computing Systems designs and builds AI agents, custom software,
+            and cloud infrastructure that automate the hard parts of your business —
+            so your team can focus on the work that matters.
+          </p>
+          <div class="hero-actions">
+            <a href="#services" class="btn btn-primary">Explore services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">What we do</p>
+          <h2>Services</h2>
+          <p class="section-sub">From a rough idea to a running system — designed, built, tested, and shipped.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg>
+            </div>
+            <h3>AI &amp; Agentic Systems</h3>
+            <p>Custom AI agents and LLM integrations that reason over your data, use your tools, and automate multi-step business workflows — with iterative prompt refinement built in.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Custom Software Engineering</h3>
+            <p>Full-stack design and delivery of web applications, APIs, and line-of-business systems — built with test-driven discipline and 25+ years of engineering craft.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><polyline points="21 3 21 9 15 9"/></svg>
+            </div>
+            <h3>Legacy Modernization</h3>
+            <p>Replace aging systems incrementally — new capabilities delivered alongside the old platform, with zero disruption to the business that depends on it.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 .4-9A7 7 0 0 0 4.3 12 4 4 0 0 0 6 19z"/></svg>
+            </div>
+            <h3>Cloud &amp; DevOps</h3>
+            <p>Azure architecture, CI/CD pipeline automation, containerization, and quality gates — so every change ships safely, quickly, and repeatably.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+            </div>
+            <h3>Mobile Apps &amp; Games</h3>
+            <p>Cross-platform apps and games built with Flutter — one codebase, polished experiences on iOS and beyond.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section-alt" id="about">
+      <div class="container about-inner">
+        <div class="about-copy reveal">
+          <p class="eyebrow">Who we are</p>
+          <h2>Senior engineering, without the overhead.</h2>
+          <p>
+            Major Computing Systems Ltd. is an independent software consultancy led by
+            Patrick Major — a full-stack engineer with over 25 years of experience
+            shipping software, from Electronic Arts' FIFA franchise to enterprise-scale
+            AI systems at WorkSafeBC.
+          </p>
+          <p>
+            You get the judgment that only comes from decades of production systems:
+            straight answers, honest estimates, and software built to last.
+          </p>
+        </div>
+        <div class="stat-grid reveal">
+          <div class="stat"><span class="stat-num">25+</span><span class="stat-label">years shipping software</span></div>
+          <div class="stat"><span class="stat-num">AI</span><span class="stat-label">agentic systems in production at enterprise scale</span></div>
+          <div class="stat"><span class="stat-num">EA</span><span class="stat-label">game-industry engineering pedigree</span></div>
+          <div class="stat"><span class="stat-num">100%</span><span class="stat-label">senior — no hand-offs, no juniors learning on your dime</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2>Products we've shipped</h2>
+        </div>
+        <div class="card-grid work-grid">
+          <a class="card work-card reveal" href="https://sands.majorcomputing.ca" target="_blank" rel="noopener">
+            <h3>Colored Sands of Egypt</h3>
+            <p>A mobile puzzle game built with Flutter — relaxing gameplay wrapped in an Ancient Egyptian aesthetic.</p>
+            <span class="work-link">sands.majorcomputing.ca &rarr;</span>
+          </a>
+          <a class="card work-card reveal" href="https://www.clinkandmingle.com" target="_blank" rel="noopener">
+            <h3>Clink &amp; Mingle</h3>
+            <p>An event-planning platform that takes the friction out of getting people together.</p>
+            <span class="work-link">clinkandmingle.com &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section-alt" id="contact">
+      <div class="container contact-inner reveal">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Let's build something.</h2>
+        <p class="contact-sub">
+          Tell us what's slowing your business down — we'll tell you honestly whether
+          we can fix it, and how.
+        </p>
+        <a href="mailto:sales@majorcomputing.ca" class="contact-email">sales@majorcomputing.ca</a>
+        <p class="contact-meta">Based in Chilliwack, BC, Canada &middot; Working remotely with clients everywhere</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo-mark.png" alt="" class="brand-mark" aria-hidden="true">
+        <span>&copy; <span id="year">2026</span> Major Computing Systems Ltd.</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/vendor/three.min.js" defer></script>
+  <script src="js/main.js?v=16" defer></script>
+  <script src="js/neural.js?v=16" defer></script>
+</body>
+</html>
