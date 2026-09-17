@@ -12,7 +12,7 @@ Design: dark bold theme, brand palette cyan→blue→violet from the logo. Hero 
 
 Done: GoDaddy A records + `www` CNAME deleted; `majorcomputing.ca` and `www.majorcomputing.ca` added as custom domains on the **`majorcomputing-ca` Worker** (static assets, git-connected to this repo — pushes to `main` auto-deploy). Both hostnames verified: 200, `Server: cloudflare`, valid certs (Google Trust Services).
 
-**One remaining item:** AGENTS.md requires a canonical host with a 301 from the other (www → apex). Right now both hostnames serve content directly. Add it in the dashboard: zone → Rules → Redirect Rules → hostname `www.majorcomputing.ca` → 301 to `https://majorcomputing.ca` (preserve path/query).
+**Done:** www → apex 301 redirect verified (query preserved; path is dropped by the rule's target — harmless for a single-page site; add `${1}` to the action target if path preservation is ever needed). Project fully shipped.
 
 Note: Cloudflare's dashboard merged Pages into Workers — the project was created as a **Worker with static assets** (`majorcomputing-ca`, URL `majorcomputing-ca.codingwithoutbugs.workers.dev`), git-connected to `pmajor74/majorcomputing.ca`. Verified live: serves the full site incl. WebGL hero over HTTPS (Server: cloudflare). Custom domains are added under the Worker's "Domains and routes" panel (functionally identical to Pages custom domains). If pushes stop auto-deploying, check Settings → Builds on the Worker for the git connection.
 

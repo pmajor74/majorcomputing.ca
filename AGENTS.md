@@ -22,4 +22,4 @@ Read `handoff.md` first for session context and the current state of DNS/hosting
 
 The site is served by the **`majorcomputing-ca` Worker** (Workers static assets — Cloudflare's successor to Pages), git-connected to this repo; pushes to `main` auto-deploy. The old GoDaddy A records and `www` CNAME were deleted at cutover; `majorcomputing.ca` and `www.majorcomputing.ca` are custom domains on the Worker.
 
-**Still pending:** the canonical-host redirect. Both hostnames currently serve content; per the hard constraint above, add a zone **Redirect Rule** (Rules → Redirect Rules): `http.host eq "www.majorcomputing.ca"` → 301 → `https://majorcomputing.ca` preserving path/query.
+**Done:** www → apex 301 redirect rule is live (Redirect Rules: `https://www.majorcomputing.ca/*` → apex). Verified: www root and paths 301 to `https://majorcomputing.ca/`; apex serves 200. (Note: rule as configured preserves query string but drops the path — target lacks `${1}`. Harmless for a single-page site; to preserve paths too, change the action target to `https://majorcomputing.ca/${1}`.)
