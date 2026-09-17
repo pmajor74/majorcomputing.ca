@@ -8,7 +8,11 @@ The site is **built and pushed** to `main` at `github.com/pmajor74/majorcomputin
 
 Design: dark bold theme, brand palette cyan→blue→violet from the logo. Hero = 3D wireframe brain inside a neural cloud (shader glow nodes, pulsing pathways, flow particles + signal orbs riding every connection, cursor reach-out). Canvas is a fixed full-page backdrop that dims on scroll. Brand lockup in hero; header brand appears on scroll. Sections: Services (5 cards), About, Work (sands/clinkandmingle), Contact (sales@majorcomputing.ca). Scroll-spy nav, mobile hamburger, no-WebGL fallback, pauses when tab hidden.
 
-**Remaining: DNS cutover (steps below).**
+## Cutover status (2026-09-17)
+
+Done: GoDaddy A records + `www` CNAME deleted; `majorcomputing.ca` and `www.majorcomputing.ca` added as custom domains on the **`majorcomputing-ca` Worker** (static assets, git-connected to this repo — pushes to `main` auto-deploy). Both hostnames verified: 200, `Server: cloudflare`, valid certs (Google Trust Services).
+
+**One remaining item:** AGENTS.md requires a canonical host with a 301 from the other (www → apex). Right now both hostnames serve content directly. Add it in the dashboard: zone → Rules → Redirect Rules → hostname `www.majorcomputing.ca` → 301 to `https://majorcomputing.ca` (preserve path/query).
 
 Note: Cloudflare's dashboard merged Pages into Workers — the project was created as a **Worker with static assets** (`majorcomputing-ca`, URL `majorcomputing-ca.codingwithoutbugs.workers.dev`), git-connected to `pmajor74/majorcomputing.ca`. Verified live: serves the full site incl. WebGL hero over HTTPS (Server: cloudflare). Custom domains are added under the Worker's "Domains and routes" panel (functionally identical to Pages custom domains). If pushes stop auto-deploying, check Settings → Builds on the Worker for the git connection.
 

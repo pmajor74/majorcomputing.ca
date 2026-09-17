@@ -18,6 +18,8 @@ Read `handoff.md` first for session context and the current state of DNS/hosting
 - `sands.majorcomputing.ca` is an existing Cloudflare Pages site — do not disturb it.
 - Both `majorcomputing.ca` AND `www.majorcomputing.ca` must work. Pick one canonical address and 301-redirect the other (current behavior redirects www → apex).
 
-## Pending cutover step (do this only when the new site is ready to go live)
+## Hosting (live since 2026-09-17)
 
-The apex currently points at a GoDaddy Website Builder site via two A records (`76.223.105.230`, `13.248.243.5`, both proxied) plus a `www` CNAME to the apex. Before attaching the Pages custom domain, delete those three records in Cloudflare DNS — this takes the old GoDaddy site offline permanently. Then add `majorcomputing.ca` and `www.majorcomputing.ca` as custom domains in the Pages project.
+The site is served by the **`majorcomputing-ca` Worker** (Workers static assets — Cloudflare's successor to Pages), git-connected to this repo; pushes to `main` auto-deploy. The old GoDaddy A records and `www` CNAME were deleted at cutover; `majorcomputing.ca` and `www.majorcomputing.ca` are custom domains on the Worker.
+
+**Still pending:** the canonical-host redirect. Both hostnames currently serve content; per the hard constraint above, add a zone **Redirect Rule** (Rules → Redirect Rules): `http.host eq "www.majorcomputing.ca"` → 301 → `https://majorcomputing.ca` preserving path/query.
