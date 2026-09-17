@@ -1,13 +1,13 @@
 # majorcomputing.ca — Company Website
 
-Static website for **Major Computing Systems Ltd.**, deployed via **Cloudflare Pages** from this public git repo. Must serve both `majorcomputing.ca` and `www.majorcomputing.ca`.
+Static website for **Major Computing Systems Ltd.**, deployed via the **`majorcomputing-ca` Cloudflare Worker** (static assets) from this public git repo. Must serve both `majorcomputing.ca` and `www.majorcomputing.ca`.
 
 Read `handoff.md` first for session context and the current state of DNS/hosting.
 
 ## Deployment architecture
 
-- Hosting: Cloudflare Pages (connect this repo via dashboard → Workers & Pages → Create → Pages → Connect to Git).
-- Build: plain static site (HTML/CSS/JS) unless the project evolves — framework preset "None", output directory `/` (or the folder containing the built files).
+- Hosting: `majorcomputing-ca` Worker with static assets (Cloudflare's current model; Pages projects are now Workers). Git-connected to this repo — pushes to `main` auto-deploy.
+- Build: plain static site (HTML/CSS/JS) — no build command, output directory `/`.
 - DNS: managed in Cloudflare (nameservers `ashley/dale.ns.cloudflare.com`). Pages custom-domain setup auto-creates the needed records (CNAME flattening at apex).
 - SSL: Cloudflare Universal SSL (edge) + SSL/TLS mode **Full** (not Flexible, not Full Strict — the old GoDaddy origin cert is expired and irrelevant once cut over).
 
