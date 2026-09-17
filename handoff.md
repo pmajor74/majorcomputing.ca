@@ -8,7 +8,9 @@ The site is **built and pushed** to `main` at `github.com/pmajor74/majorcomputin
 
 Design: dark bold theme, brand palette cyan→blue→violet from the logo. Hero = 3D wireframe brain inside a neural cloud (shader glow nodes, pulsing pathways, flow particles + signal orbs riding every connection, cursor reach-out). Canvas is a fixed full-page backdrop that dims on scroll. Brand lockup in hero; header brand appears on scroll. Sections: Services (5 cards), About, Work (sands/clinkandmingle), Contact (sales@majorcomputing.ca). Scroll-spy nav, mobile hamburger, no-WebGL fallback, pauses when tab hidden.
 
-**Remaining: Cloudflare Pages setup + DNS cutover (steps below).**
+**Remaining: DNS cutover (steps below).**
+
+Note: Cloudflare's dashboard merged Pages into Workers — the project was created as a **Worker with static assets** (`majorcomputing-ca`, URL `majorcomputing-ca.codingwithoutbugs.workers.dev`), git-connected to `pmajor74/majorcomputing.ca`. Verified live: serves the full site incl. WebGL hero over HTTPS (Server: cloudflare). Custom domains are added under the Worker's "Domains and routes" panel (functionally identical to Pages custom domains). If pushes stop auto-deploying, check Settings → Builds on the Worker for the git connection.
 
 ## What happened in the previous session (working dir was `C:\Users\patri`)
 
