@@ -1,10 +1,14 @@
 # Handoff — majorcomputing.ca website project
 
-Date: 2026-09-17
+Date: 2026-09-17 (updated: site built & pushed)
 
 ## Where we are
 
-This repo is freshly synced and **empty**. The task: design and build the company website for **Major Computing Systems Ltd.** as a static site, then deploy it via Cloudflare Pages so it serves `majorcomputing.ca` and `www.majorcomputing.ca`. The site has not been designed yet — that's the next step.
+The site is **built and pushed** to `main` at `github.com/pmajor74/majorcomputing.ca` (commit acd6599). Single-page static site: `index.html` + `css/style.css` + `js/main.js` + `js/neural.js` (three.js r152 vendored in `js/vendor/` — no build step, output dir `/`).
+
+Design: dark bold theme, brand palette cyan→blue→violet from the logo. Hero = 3D wireframe brain inside a neural cloud (shader glow nodes, pulsing pathways, flow particles + signal orbs riding every connection, cursor reach-out). Canvas is a fixed full-page backdrop that dims on scroll. Brand lockup in hero; header brand appears on scroll. Sections: Services (5 cards), About, Work (sands/clinkandmingle), Contact (sales@majorcomputing.ca). Scroll-spy nav, mobile hamburger, no-WebGL fallback, pauses when tab hidden.
+
+**Remaining: Cloudflare Pages setup + DNS cutover (steps below).**
 
 ## What happened in the previous session (working dir was `C:\Users\patri`)
 
@@ -16,13 +20,10 @@ This repo is freshly synced and **empty**. The task: design and build the compan
 
 ## Next steps
 
-1. **Gather requirements for the site design** — ask the user about:
-   - What Major Computing Systems Ltd. does / what the site should say (services, about, contact). The old site mentioned AI business solutions and business technology services.
-   - Content: pages needed (home, services, about, contact?), branding (logo, colors), contact details to publish.
-   - Style preferences.
-2. **Build the static site** in this repo (`index.html` at root, plus assets). Plain HTML/CSS/JS is fine unless the user wants a framework.
-3. **Local sanity check** the site renders correctly.
-4. **Commit and push** to the connected public repo.
+1. ~~Gather requirements / design the site~~ — done.
+2. ~~Build the static site~~ — done.
+3. ~~Local sanity check~~ — done (rendered + interaction-tested via headless Edge CDP).
+4. ~~Commit and push~~ — done.
 5. **Create the Cloudflare Pages project** (user does this in the dashboard, guided): Workers & Pages → Create → Pages → Connect to Git → select this repo. Framework preset "None", no build command, output dir `/`.
 6. **Verify** the `*.pages.dev` URL looks right.
 7. **Cutover** (only when ready — kills the GoDaddy site): delete the two GoDaddy A records and the `www` CNAME in Cloudflare DNS, then add `majorcomputing.ca` and `www.majorcomputing.ca` as custom domains on the Pages project.
