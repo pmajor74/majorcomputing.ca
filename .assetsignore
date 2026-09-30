@@ -1,0 +1,10 @@
+# Files in this repository that are not pages of the website.
+#
+# The majorcomputing-ca Worker serves the repository root as static assets,
+# so without this list it also served the notes below and the whole .git
+# folder (https://majorcomputing.ca/.git/HEAD answered 200 on 30 September
+# 2026). Workers static assets reads this file at deploy; gitignore syntax.
+.git
+AGENTS.md
+handoff.md
+live-check.png
